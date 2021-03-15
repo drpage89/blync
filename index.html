@@ -4,14 +4,17 @@
 
 			function init()
 			{
-				navigator.usb.getDevices()
+				console.log("Attempting to Query Devices")
+				navigator.usb.requestDevice({filters:[]}).then(function(device){
+				   console.log(device);
+				});
 			}
 
 		</script>
 	</head>
 	<body>
-		<button onclick="init()">Launch</button>
-    <br /><br />
-    v0.0.3
+		<button onclick="init()">Launch 2</button>
+		<br /><br />
+		v0.0.4
 	</body>
 </html>
